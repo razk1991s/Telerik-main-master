@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="sanity" parallel="false">
+        <test name="Sanity Tests">
+            <parameter name="PlatformName" value="web"></parameter>
+            <classes>
+                <class name="sanity.VerifyManualCRUDOperationsTest"></class>
+                <class name="sanity.AddNewRecTest"></class>
+                <class name="sanity.EditFirstProductTest"></class>
+                <class name="sanity.EntityFrameworkTest"></class>
+            </classes>
+        </test>
+</suite>
