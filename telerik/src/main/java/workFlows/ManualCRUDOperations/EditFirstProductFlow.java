@@ -37,21 +37,21 @@ public class EditFirstProductFlow extends CommonOps {
 //        Verification.verifyTextInElement(lastProdName.get(lastProdName.size()-1).getText(),productName);
 
 
+
+        List <WebElement> realLastProdName = null;
+
+        for(int i=1; i<=10;i++){
+            if(lastProdName.get(i).isDisplayed()){
+                realLastProdName =lastProdName;
+            }
+        }
+        Verification.verifyTextInElement((WebElement) realLastProdName, productName);
+
+
 //
-//        List <WebElement> realLastProdName = null;
-//
-//        for(int i=1; i>=10;i++){
-//            if(lastProdName.get(i).isDisplayed()){
-//                realLastProdName =lastProdName;
-//            }
-//        }
-//        Verification.verifyTextInElement((WebElement) realLastProdName, productName);
-
-
-
-        Verification.verifyTextInElement(manualCRUDOperations.ver_edit_product_name, productName);
-        Verification.verifyTextInElement(manualCRUDOperations.ver_edit_unit_in_stock, unitInPrice);
-        Verification.verifyTextInElement(manualCRUDOperations.ver_edit_price, price);
+//        Verification.verifyTextInElement(manualCRUDOperations.ver_edit_product_name, productName);
+//        Verification.verifyTextInElement(manualCRUDOperations.ver_edit_unit_in_stock, unitInPrice);
+//        Verification.verifyTextInElement(manualCRUDOperations.ver_edit_price, price);
     }
 
 
