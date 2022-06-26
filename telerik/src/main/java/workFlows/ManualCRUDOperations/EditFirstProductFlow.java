@@ -33,25 +33,23 @@ public class EditFirstProductFlow extends CommonOps {
 
     public static void test02_verify_edit_successful(String productName, String unitInPrice, String price) {
 
-        List<WebElement> lastProdName = driver.findElements(By.xpath("//tr[@class='rgRow' or @class='rgAltRow']/td[3]"));
+        Verification.verifyTextInElement(manualCRUDOperations.ver_edit_product_name, productName);
+        Verification.verifyTextInElement(manualCRUDOperations.ver_edit_unit_in_stock, unitInPrice);
+        Verification.verifyTextInElement(manualCRUDOperations.ver_edit_price, price);
+
+
+//        List<WebElement> lastProdName = driver.findElements(By.xpath("//tr[@class='rgRow' or @class='rgAltRow']/td[3]"));
 //        Verification.verifyTextInElement(lastProdName.get(lastProdName.size()-1).getText(),productName);
 
-
-
-        List <WebElement> realLastProdName = null;
-
-        for(int i=1; i<=10;i++){
-            if(lastProdName.get(i).isDisplayed()){
-                realLastProdName =lastProdName;
-            }
-        }
-        Verification.verifyTextInElement((WebElement) realLastProdName, productName);
-
-
+//        List <WebElement> realLastProdName = null;
 //
-//        Verification.verifyTextInElement(manualCRUDOperations.ver_edit_product_name, productName);
-//        Verification.verifyTextInElement(manualCRUDOperations.ver_edit_unit_in_stock, unitInPrice);
-//        Verification.verifyTextInElement(manualCRUDOperations.ver_edit_price, price);
+//        for(int i=1; i<=10;i++){
+//            if(lastProdName.get(i).isDisplayed()){
+//                realLastProdName =lastProdName;
+//            }
+//        }
+//        Verification.verifyTextInElement((WebElement) realLastProdName, productName);
+
     }
 
 
